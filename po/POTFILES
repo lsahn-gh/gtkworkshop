@@ -1,0 +1,7 @@
+data/org.gnome.Gtkworkshop.desktop.in
+data/org.gnome.Gtkworkshop.appdata.xml.in
+data/org.gnome.Gtkworkshop.gschema.xml
+src/window.ui
+src/main.py
+src/window.py
+
