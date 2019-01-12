@@ -25,21 +25,16 @@ class GtkWorkshopLesson4(MyWindow):
         vbox.pack_start(label, True, True, 0)
 
         # Label 만들기 1
-        label = Gtk.Label("Label1")
-        vbox.pack_start(label, True, True, 0)
+
 
         markup = "Go to <i><b><a href=\"https://google.com\">google</a></b></i>"
         # Label 만들기 2
         # set_markup 이용
-        label = Gtk.Label()
-        label.set_markup(markup)
-        vbox.pack_start(label, True, True, 0)
+
 
         # Label 만들기 3
         # tooltip 추가하기
-        label = Gtk.Label("Label3")
-        label.set_tooltip_text("Tooltip on the label2")
-        vbox.pack_start(label, True, True, 0)
+
         
         self.show_all()
         

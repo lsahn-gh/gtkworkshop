@@ -26,16 +26,10 @@ class GtkWorkshopLesson7(Gtk.Window):
         self.box.pack_start(switch, True, True, 0)
 
         # Switch Button 1
-        switch = Gtk.Switch()
-        switch.connect("notify::active", self._on_switch_cb)
-        switch.props.active = False
-        self.box.pack_start(switch, True, True, 0)
+
         
         # Switch Button 2 
-        switch = Gtk.Switch()
-        switch.connect("notify::active", self._on_switch_cb)
-        switch.set_active(False)
-        self.box.pack_start(switch, True, True, 0)
+
         
         self.show_all()
         
@@ -43,11 +37,7 @@ class GtkWorkshopLesson7(Gtk.Window):
         pass
 
     # Callback
-    def _on_switch_cb(self, switch, gparam):
-        if switch.get_active():
-            print("On")
-        else:
-            print("Off")
+
         
         
 def lesson7():

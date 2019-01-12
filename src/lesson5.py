@@ -29,33 +29,20 @@ class GtkWorkshopLesson5(Gtk.Window):
 
         # Normal Button
         # 본인의 이름 출력
-        button = Gtk.Button(label="Name")
-        button.connect("clicked", self._on_name_cb)
-        self.box.pack_start(button, False, False, 0)
+
         
         # Mnemonic Button (_Age)
         # 본인의 나이 출력
-        button = Gtk.Button.new_with_mnemonic("_Age")
-        button.connect("clicked", self._on_age_cb)
-        self.box.pack_start(button, False, False, 0)
+
         
         # Mnemonic Button (_Click Me)
         # Click Me 버튼이 눌렸다는 메세지 출력
-        button = Gtk.Button.new_with_mnemonic("_Click Me")
-        button.connect("clicked", self._on_click_me_cb)
-        self.box.pack_start(button, False, False, 0)
+
         
         self.show_all()
         
     # Callbacks 구현
-    def _on_name_cb(self, button):
-        print("My name is Yi-Soo An")
-        
-    def _on_age_cb(self, button):
-        print("My age is 100")
-        
-    def _on_click_me_cb(self, button):
-        print("Click Me button was clicked!")
+
         
 def lesson5():
     GtkWorkshopLesson5()
