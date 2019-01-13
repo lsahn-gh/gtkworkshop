@@ -17,6 +17,10 @@ class GtkWorkshopLesson3(Gtk.Window):
         
         # 1. Gtk.HeaderBar 구현
         # 2. Class로 구현
+        hb = Gtk.HeaderBar()
+        hb.set_title("Lesson 3")
+        hb.set_subtitle("This is lesson 3")
+        hb.set_show_close_button(True)
 
         self.set_titlebar(hb)
         

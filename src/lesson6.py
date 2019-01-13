@@ -25,10 +25,14 @@ class GtkWorkshopLesson6(Gtk.Window):
         self.box.pack_start(button, True, True, 0)
 
         # Toggle Button 1
-
+        button = Gtk.ToggleButton(label="Toggle 1")
+        button.connect("toggled", self._on_toggle_cb, 1)
+        self.box.pack_start(button, True, True, 0)
         
         # Toggle Button 2 with mnemonic
-
+        button = Gtk.ToggleButton.new_with_mnemonic("_Toggle 2")
+        button.connect("toggled", self._on_toggle_cb, 2)
+        self.box.pack_start(button, True, True, 0)
         
         self.show_all()
         
@@ -36,7 +40,11 @@ class GtkWorkshopLesson6(Gtk.Window):
         pass
 
     # Callbacks
-
+    def _on_toggle_cb(self, button, data):
+        if data == 1 and button.get_active():
+            print("Toggle 1 is on")
+        elif data == 2 and button.get_active():
+            print("Toggle 2 is on")
         
         
 def lesson6():

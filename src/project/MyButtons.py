@@ -5,7 +5,8 @@ class BaseButton(Gtk.Button):
     def __init__(self):
         Gtk.Button.__init__(self)
         
-
+        self.connect("clicked", self._click_cb)
+        
     def _click_cb(self, widget):
         raise NotImplementedError()
         
